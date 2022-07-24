@@ -4,20 +4,15 @@ using UnityEngine;
 
 public class AuthenticationHandler : MonoBehaviour
 {
-    [SerializeField]
     public GameObject startGrid;
-    [SerializeField]
     public GameObject userDetailGrid;
-    [SerializeField]
     public GameObject verificationGrid;
-    [SerializeField]
-    public GameObject messageGrid;
+    public MessageHandler messageHandler;
 
     public void Start()
     {
         userDetailGrid.SetActive(false);
         verificationGrid.SetActive(false);
-        messageGrid.SetActive(false);
     }
     public void LoginButton()
     {
@@ -40,12 +35,8 @@ public class AuthenticationHandler : MonoBehaviour
         verificationGrid.SetActive(true);
         userDetailGrid.SetActive(false);
     }
-    public void verifyButton()
-    {
-        messageGrid.SetActive(true);
-    }
-    public void okayButton()
-    {
-        messageGrid.SetActive(false);
+    public void VerifyButton()
+    {        
+        messageHandler.Message();
     }
 }
