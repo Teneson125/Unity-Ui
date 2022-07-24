@@ -10,11 +10,14 @@ public class AuthenticationHandler : MonoBehaviour
     public GameObject userDetailGrid;
     [SerializeField]
     public GameObject verificationGrid;
+    [SerializeField]
+    public GameObject messageGrid;
 
     public void Start()
     {
         userDetailGrid.SetActive(false);
         verificationGrid.SetActive(false);
+        messageGrid.SetActive(false);
     }
     public void LoginButton()
     {
@@ -26,11 +29,6 @@ public class AuthenticationHandler : MonoBehaviour
         userDetailGrid.SetActive(true);
         startGrid.SetActive(false);
     }
-    public void VerificationButton()
-    {
-        verificationGrid.SetActive(true);
-        userDetailGrid.SetActive(false);
-    }
     public void CancelButton()
     {
         startGrid.SetActive(true);
@@ -41,5 +39,13 @@ public class AuthenticationHandler : MonoBehaviour
     {
         verificationGrid.SetActive(true);
         userDetailGrid.SetActive(false);
+    }
+    public void verifyButton()
+    {
+        messageGrid.SetActive(true);
+    }
+    public void okayButton()
+    {
+        messageGrid.SetActive(false);
     }
 }
