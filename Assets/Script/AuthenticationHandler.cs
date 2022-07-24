@@ -37,6 +37,6 @@ public class AuthenticationHandler : MonoBehaviour
     }
     public void VerifyButton()
     {        
-        messageHandler.Message();
+        messageHandler.Message("Error", "Please enter all the fields", "Hi");
     }
 }
