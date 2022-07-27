@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class MessageHandler : MonoBehaviour
 {
@@ -60,9 +61,11 @@ public class MessageHandler : MonoBehaviour
     
     private void Hi()
     {
-        authenticationHandler.startGrid.SetActive(true);
+        authenticationHandler.startGrid.SetActive(false);
         authenticationHandler.verificationGrid.SetActive(false);
         authenticationHandler.userDetailGrid.SetActive(false);
+
+        SceneManager.LoadScene(1);
     }
     private void Hello()
     {
